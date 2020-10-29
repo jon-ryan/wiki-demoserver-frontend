@@ -1,0 +1,19 @@
+<div class="container">
+    <h1>New Document</h1>
+    <br>
+    <h3>Title</h3>
+    <input type="text" id="newDocTitle" [(ngModel)]="newDocTitle" required>
+    <br>
+    <br>
+    <h3>Description</h3>
+    <textarea rows="6" cols="100" id="newDocDesc" [(ngModel)]="newDocDesc" required></textarea>
+
+    <br>
+    <br>
+    <button class="blue-button" (click)="addNewDoc()">Submit</button>
+    <br>
+    <br>
+    <ng-template [ngIf]="error">
+        {{ errorText }}
+    </ng-template>
+</div>

@@ -1,0 +1,164 @@
+/* You can add global styles to this file, and also import other style files */
+
+$primary: rgb(0, 115, 223);
+
+.example::-webkit-scrollbar {
+  display: none;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+
+  height: 100%;
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+
+  color: rgb(223, 223, 223);
+  /*background: url(./assets/background.svg) no-repeat center fixed;*/
+  background-color: rgb(36, 36, 36);
+}
+
+body {
+  padding-top: 60px;
+}
+
+.container {
+  width: 70%;
+  margin: 0 auto;
+}
+
+
+.float-right {
+  float: right;
+}
+
+.clearfix {
+  clear: both;
+}
+
+header {
+  background: $primary;
+  padding: 1em 0;
+
+  /* Make nav bar stick to the top */
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+
+    a.logo {
+      font-weight: bold;
+    }
+
+    nav {
+      float: right;
+
+      ul {
+        list-style-type: none;
+        margin: 0;
+        display: flex;
+
+        li a {
+          padding: 1em;
+
+          &:hover {
+            background: darken($primary, 5%);
+          }
+        }
+      }
+    }
+
+}
+
+button{
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.45cm;
+  padding-left: .7cm;
+  padding-right: .7cm;
+  padding-top: .25cm;
+  padding-bottom: .25cm;
+  border-radius: 5px;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.blue-button{
+  background-color: $primary;
+  color: rgb(235,235,235);
+}
+
+.red-button{
+  background-color: crimson;
+  color: rgb(235,235,235);
+}
+
+.secondary-button{
+  background-color: rgb(235,235,235);
+  color: rgb(34, 34, 34);
+}
+
+textarea, input {
+  border: 1px solid rgb(71, 71, 71);
+  border-radius: 3px;
+  font-family: 'Open Sans', Arial;
+  background-color: rgb(51, 51, 51);
+  color: rgb(235, 235, 235);
+  resize: none;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.space-evenly {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-text {
+  border: 1px solid rgb(71, 71, 71);
+  border-radius: 3px;
+  font-family: 'Open Sans', Arial;
+  background-color: rgb(51, 51, 51);
+  color: rgb(235, 235, 235);
+  font-size: 14px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+select {
+  border: 1px solid rgb(71, 71, 71);
+  border-radius: 3px;
+  font-family: 'Open Sans', Arial;
+  background-color: rgb(51, 51, 51);
+  color: rgb(235, 235, 235);
+  font-size: 14px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.blue-flat-button {
+  cursor: pointer;
+  color: $primary;
+}
+
+.red-flat-button {
+  cursor: pointer;
+  color: crimson;
+}
+
+
+.error-text {
+  color: crimson;
+}
