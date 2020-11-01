@@ -4,7 +4,7 @@ This is the frontend to the [Wikidocs demoserver](https://github.com/jon-ryan/wi
 # Clone and build
 Clone the repo with:
 ```bash
-https://github.com/jon-ryan/wiki-demoserver-frontend.git
+git clone https://github.com/jon-ryan/wiki-demoserver-frontend.git
 ```
 
 Make sure you have npm installed. Then install dependencies:
