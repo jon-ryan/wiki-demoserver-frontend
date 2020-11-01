@@ -9,7 +9,8 @@ import { DocumentgatewayService } from '../documentgateway.service';
 export class NewdocumentComponent implements OnInit {
 
   newDocTitle: string = "";
-  newDocDesc: string = "";
+  newDocAbstract: string = "";
+  newDocBody: string = "";
 
   error: boolean = false;
   errorText: string = "";
@@ -21,15 +22,15 @@ export class NewdocumentComponent implements OnInit {
   }
 
   addNewDoc(){
-    if (this.newDocTitle == "" || this.newDocDesc == "") {
+    if (this.newDocTitle == "" || this.newDocBody == "" || this.newDocAbstract == "") {
       this.errorText = "Please provide Title and Description";
       this.error = true;
       return;
     }
 
-    var doc = this._documentgateway.setDocument({"title": this.newDocTitle, "description": this.newDocDesc})
+    var doc = this._documentgateway.setDocument({"Title": this.newDocTitle, "Abstract": this.newDocAbstract, "Body": this.newDocBody})
 
-    if (doc["Title"] != this.newDocTitle || doc["Description"] != this.newDocDesc) {
+    if (doc["Title"] != this.newDocTitle || doc["Description"] != this.newDocBody) {
       this.errorText = "Something went wrong while updating the database";
       this.error = true;
       return;
@@ -38,7 +39,7 @@ export class NewdocumentComponent implements OnInit {
     this.error = false;
     
     this.newDocTitle = "";
-    this.newDocDesc = ""; 
+    this.newDocBody = ""; 
   }
 
 }
