@@ -1,5 +1,5 @@
 # Wikidocs - Frontend
-This is the frontend to the [Wikidocs demoserver](https://github.com/jon-ryan/wiki-demoserver). It is implemented with Angular. This repo is for demonstration and learning. Functionality is limited without the backend server.
+This is the frontend to the [Wikidocs demoserver](https://github.com/jon-ryan/wiki-demoserver). It is implemented with [Angular](https://angular.io/). This repo is for demonstration and learning. Functionality is limited without the backend server.
 
 # Clone and build
 Clone the repo with:
