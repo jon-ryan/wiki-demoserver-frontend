@@ -21,16 +21,16 @@ export class NewdocumentComponent implements OnInit {
     document.documentElement.scrollTop = 0;
   }
 
-  addNewDoc(){
+  async addNewDoc(){
     if (this.newDocTitle == "" || this.newDocBody == "" || this.newDocAbstract == "") {
       this.errorText = "Please provide Title and Description";
       this.error = true;
       return;
     }
 
-    var doc = this._documentgateway.setDocument({"Title": this.newDocTitle, "Abstract": this.newDocAbstract, "Body": this.newDocBody})
+    var doc = await this._documentgateway.setDocument({"Title": this.newDocTitle, "Abstract": this.newDocAbstract, "Body": this.newDocBody})
 
-    if (doc["Title"] != this.newDocTitle || doc["Description"] != this.newDocBody) {
+    if (doc["Title"] != this.newDocTitle || doc["Abstract"] != this.newDocAbstract || doc["Body"] != this.newDocBody) {
       this.errorText = "Something went wrong while updating the database";
       this.error = true;
       return;
@@ -39,6 +39,7 @@ export class NewdocumentComponent implements OnInit {
     this.error = false;
     
     this.newDocTitle = "";
+    this.newDocAbstract = "";
     this.newDocBody = ""; 
   }
 

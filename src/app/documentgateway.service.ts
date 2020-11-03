@@ -7,22 +7,16 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class DocumentgatewayService {
 
-  private documents: Array<Object> = [];
-
-  private url: string = "http://localhost:8080";
-  private urlGetAllDocs: string = "http://localhost:8080/api/getalldocs";
-
   constructor(private _httpClient: HttpClient) { }
 
   public async getDocuments() {
-    var docs = this._httpClient.get(this.urlGetAllDocs);
-    console.log(docs)
+    var docs = await this._httpClient.get("/api/getalldocs").toPromise();
     return docs["Documents"];
   }
 
   public async setDocument(newDoc: Object) {
-    var doc = await this._httpClient.post("${this.url}/api/addnewdoc", newDoc, { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) })
-    console.log(doc)
+    var doc = await this._httpClient.post("/api/addnewdoc", newDoc, { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) }).toPromise();
+    console.log(doc);
     return doc;
   }
 }

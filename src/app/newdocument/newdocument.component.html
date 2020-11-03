@@ -1,16 +1,25 @@
 <div class="container">
     <h1>New Document</h1>
     <br>
-    <h3>Title</h3>
-    <input type="text" id="newDocTitle" [(ngModel)]="newDocTitle" required>
+    <div class="form__group field">
+        <input type="text" class="form__field" placeholder="Title" name="newDocTitle" id='newDocTitle'
+            [(ngModel)]="newDocTitle" required />
+        <label for="newDocTitle" class="form__label">Title</label>
+    </div>
     <br>
     <br>
-    <h3>Abstract</h3>
-    <input type="text" id="newDocAbstract" [(ngModel)]="newDocAbstract" required>
+    <div class="form__group field">
+        <input type="text" class="form__field" placeholder="Abstract" name="newDocAbstract" id='newDocAbstract'
+            [(ngModel)]="newDocAbstract" required />
+        <label for="newDocAbstract" class="form__label">Abstract</label>
+    </div>
     <br>
     <br>
-    <h3>Description</h3>
-    <textarea rows="6" cols="100" id="newDocBody" [(ngModel)]="newDocBody" required></textarea>
+    <div class="form__group field">
+        <textarea rows="6" cols="100" class="form__field" placeholder="Body" name="newDocBody" id='newDocBody'
+            [(ngModel)]="newDocBody" required></textarea>
+        <label for="newDocBody" class="form__label">Body</label>
+    </div>
 
     <br>
     <br>

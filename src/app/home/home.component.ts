@@ -19,7 +19,6 @@ export class HomeComponent implements OnInit {
   private async init(){
     document.documentElement.scrollTop = 0;
     this.documents = await this._documentgateway.getDocuments();
-    console.log(this.documents)
   }
 
 }

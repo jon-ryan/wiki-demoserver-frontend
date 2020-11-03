@@ -12,12 +12,12 @@ Make sure you have npm installed. Then install dependencies:
 npm install
 ```
 
-Run dev build:
+Run dev build with backend server running on port 8080:
 ```bash
-ng serve
+ng serve --open --proxy-config proxy.config.json
 ```
 
-Build prod:
+Build prod, serve files from backend server:
 ```bash
 ng build
 ```
