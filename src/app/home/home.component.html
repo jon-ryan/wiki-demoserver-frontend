@@ -2,13 +2,13 @@
     <h1>Browse Documents</h1>
 
     <ng-template [ngIf]="documents.length == 0">
-        <p>
+        <div class="card">
             Oopsy, no documents in the wiki database yet :/
-        </p>
+        </div>        
     </ng-template>
 
 
-    <div class="wiki-element" *ngFor="let doc of documents">
+    <div class="card" *ngFor="let doc of documents">
         <h3>{{ doc["Title"] }}</h3>
         <p>
             {{ doc["Body"] }}
